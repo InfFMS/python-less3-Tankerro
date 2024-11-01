@@ -5,17 +5,17 @@
 N = int(input())
 
 k = 0
-min = 100
-max = -100
-a = int(input())
-min = max = a
-while k < N-1:
+min = 99
+max = -99
+
+while k < N:
     a = int(input())
     if a > 9 and a % 3 == 0:
          if max < a: max = a
-         elif min > a: min = a
+         if min > a: min = a
     k += 1
 
-if min == 100:
+if min == 99 and max == -99:
     print('нет')
 else: print(f"Минимальное двузначное число, делящееся на 3: {min}\nМаксимальное двузначное число, делящееся на 3: {max}")
+"5\n12\n15\n22\n30\n45\n"
